@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+.mn {
+  overflow: hidden;
+  background-color: white;
+
+}
+
+.mn a {
+  float: right;
+  display: block;
+  color: black;font-family:arial;
+  text-align: center;
+  padding: 38px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+.mn a:hover {
+  background-color: white;
+  color: black;
+}
+
+.mn a.active {
+  background-color: white;
+  color: black;
+}
+
+.mn .icon {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .mn a:not(:first-child) {display: none;}
+  .mn a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mn.responsive {position: relative;}
+  .mn.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height:0px;
+  width: 0px;
+  margin: 0 0px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+.topnav {
+margin-top:-40px;
+  overflow: hidden;
+  background-color: pink;
+padding-left:30%;
+font-family:arial;
+
+}
+
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: pink;
+  text-align: center;
+  padding: 30px 30px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+.topnav a:hover{
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.topnav a:hover:after {
+  content: '';
+  position: absolute;
+  width: 98%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.topnav a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.topnav a.active {
+  display: inline-block;
+  position: relative;
+  color: red;
+}
+.topnav a.active:after {
+  content: '';
+  position: absolute;
+  width: 98%;
+  transform: scaleX(0);
+  height: 1px;margin-top:-2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.topnav a.active:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color:#232F3E;
+}
+body {
+  margin: 0;
+  font-family: sofia, Helvetica, sans-serif;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #232F3E;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #232F3E;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+.lfooter{border:0px solid black;height:40px;background-color:#131A22;color:#e0e0e0;font-family:arial;font-size:12px;width:100%}
+
+@media screen and (max-width: 900px) {
+
+.lfooter{font-size:10px}
+}
+@media screen and (max-width: 400px) {
+  .lfooter{display: none;
+}}
+.lfooter2{border:0px solid black;height:40px;background-color:black;color:#e0e0e0;font-family:arial;font-size:12px;width:100%}
+
+@media screen and (max-width: 900px) {
+
+.lfooter2{font-size:10px}
+}
+@media screen and (max-width: 400px) {
+  .lfooter2{display: none;
+}}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .red{display:none}
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.footer{
+border:0px solid transparent;
+height:460px;
+background-color:#232F3E;
+}
+
+.tags{
+border:1px solid transparent;
+float:left;
+width:20%;
+height:400px;
+background-color:#232F3E;
+
+}
+.tagss{
+border:1px solid transparent;
+float:left;
+width:20%;
+height:400px;
+background-color:#232F3E;
+
+}
+
+.extra{
+border:1px solid transparent;
+float:left;
+width:35%;
+height:420px
+background-color:#232F3E;}
+
+@media screen and (max-width: 900px) {
+.dotss{display:none}
+.tags{
+border:1px solid transparent;
+float:left;
+width:35%;
+height:350px}
+
+.tagss{
+border:1px solid transparent;
+float:left;
+width:35%;
+height:260px}
+
+}
+ .extra{
+border:0px solid transparent;
+float:left;
+width:15%;
+height:400px}
+
+.footer{
+border:1px solid grey;
+height:620px;
+background-color:#232F3E;
+}
+
+.dotsk{color:#636161;text-decoration:none;font-family:sofia;color:white;font-size:40px}
+.dotskk{color:#636161;text-decoration:none;font-family:sofia;color:transparent;font-size:40px}
+
+
+}
+
+.dots{
+text-align:left;
+font-size:65px;
+line-height: 90%;
+color:#e3e1e1;
+font-family:sofia;
+color:transparent}
+
+.dotss{
+text-align:left;
+font-size:55px;
+line-height: 90%;
+color:#e3e1e1;
+font-family:sofia;
+color:transparent
+
+}
+
+
+.comp{color:white}
+
+.red{color:white;font-family:arial}
+
+
+.card {
+  box-shadow: 10px 15px 10px 12px rgba(0, 0, 0, 0.1);
+  max-width: 24.15%;
+  float:left;
+  margin: 5px;
+  text-align: left;
+  font-family: arial;
+  margin-top:30px;	
+  padding-right:-3px;
+  background-color:white;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 60%;
+  font-size: 18px;
+  margin-left:50px;
+  
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1500px) {
+.card{  max-width: 45.15%;}
+}
+
+@media screen and (max-width: 700px) {
+.card{  max-width: 100%;}
+}
+
+.cardd {
+  box-shadow: 10px 15px 10px 12px rgba(0, 0, 0, 0.1);
+  max-width: 24.15%;
+  float:left;
+  margin: 5px;
+  text-align: left;
+  font-family: arial;
+  margin-top:30px;	
+  padding-right:-3px;
+  background-color:white;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.cardd button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 60%;
+  font-size: 18px;
+  margin-left:50px;
+  
+}
+
+.cardd button:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1500px) {
+.cardd{display:none}
+}
+
+
+
+
+
+.mobiletop{
+border:0px solid red;width:80%;height:70px;text-align:center;font-size:30px;border-radius:15px;float:left;padding-top:15px;background-color:#A9DBE2;font-family:arial
+
+}
+@media screen and (max-width: 520px) {
+.mobiletop{
+border:0px solid red;width:80%;height:70px;text-align:center;font-size:20px;border-radius:15px;float:left;margin-top:0px;background-color:#A9DBE2;font-family:arial
+
+}
+
+
+
+}
+
+
+@media screen and (max-width: 1300px) {
+.topnav{display:none}
+
+}
+
+.adder{height:650px}
+@media screen and (max-width: 700px) {
+.adder{height:1220px}
+
+}
+
+</style>
+</head>
+<body style="background-color:#e6eff2">
+<div class="mn" id="myTopnav">
+<span style="font-family:Lucida Handwriting
+;font-size:1.8vw;padding:40px;text-align:center;"><img src="logo1.jpg" class="responsive" width="100px" height="100px">Freedom251
+
+</span>
+  <a href="#">Mobiles</a>
+  <a href="#">Laptops</a>
+  <a href="#">Desktop</a>
+  <a href="#">Gaming</a>
+  <a href="#" class="active">Products</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="slider1.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="slider1.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="slider1.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+<div style="text-align:center;">
+  <span class="dot"></span> 
+    <span class="dot"></span> 
+	  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+ 
+<div class="topnav" id="myTopnav">
+  <a href="#" class="active"><i class="fa fa-tag"></i>&nbsp;&nbsp;Deals</a>
+  <a href="#"><i class="fa fa-mobile"></i></i>&nbsp;&nbsp;Mobiles</a>
+  <a href="#"><i class="fa fa-laptop"></i>&nbsp;&nbsp;Laptops</a> 
+  <a href="#"><i class="fa fa-tv"></i></i>&nbsp;&nbsp;Desktop</a>
+  <a href="#"><i class="fa fa-gamepad"></i>&nbsp;&nbsp;Gaming</a>
+  <a href="products.html"><i class="fa fa-tablet"></i>&nbsp;&nbsp;Tablets</a>
+
+
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop >0 || document.documentElement.scrollTop >0) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "0px";
+  }
+}
+</script>
+
+
+
+
+
+
+<div style="border:0px solid red;height:20px"></div>
+<div style="border:0px solid red;width:10%;height:70px;float:left;margin-top:0px"></div>
+<div class="mobiletop">
+Big On Love, Small On Pocket</h1>
+</div>
+<div style="border:0px solid red;width:10%;height:20px;float:left;margin-top:0px"></div>
+
+
+
+<div style="border:0px solid red;height:100px;width:10%;float:left"></div>
+<div style="border:0px solid red;height:100px;width:10%;float:left">
+</div>
+<div style="border:0px solid red;height:100px;width:80%;float:left;margin-top:-55px">
+
+
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+  <img src="product1.jpg" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO A15s </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+
+  <img src="product2.jpg" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+    <h2>OPPO A334</h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product3.jpg" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO F17  </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product4.png" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO a54  </h2>
+
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+
+
+
+
+</div>
+
+
+
+<!----fdgdls'g\h;]h1]-->
+<div class="adder" ></div>
+
+
+
+
+<div style="border:0px solid red;height:20px"></div>
+<div style="border:0px solid red;width:10%;height:70px;float:left;margin-top:0px"></div>
+<div class="mobiletop">
+Grab Now, Or Gone</h1>
+</div>
+<div style="border:0px solid red;width:10%;height:20px;float:left;margin-top:0px"></div>
+
+
+
+<div style="border:0px solid red;height:100px;width:10%;float:left"></div>
+<div style="border:0px solid red;height:100px;width:10%;float:left">
+</div>
+<div style="border:0px solid red;height:100px;width:80%;float:left;margin-top:-55px">
+
+
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+  <img src="product5.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO A15s </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+
+  <img src="product6.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+    <h2>OPPO A334</h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product7.jpg" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO F17  </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product8.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO a54  </h2>
+
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+
+
+
+
+</div>
+
+
+
+
+<!-- jhfgklfg-->
+<div class="adder" ></div>
+
+
+
+<div style="border:0px solid red;height:20px"></div>
+<div style="border:0px solid red;width:10%;height:70px;float:left;margin-top:0px"></div>
+<div class="mobiletop">
+Offers On Tablet's</h1>
+</div>
+<div style="border:0px solid red;width:10%;height:20px;float:left;margin-top:0px"></div>
+
+
+
+<div style="border:0px solid red;height:100px;width:10%;float:left"></div>
+<div style="border:0px solid red;height:100px;width:10%;float:left">
+</div>
+<div style="border:0px solid red;height:100px;width:80%;float:left;margin-top:-55px">
+
+
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+  <img src="product9.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO A15s </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+
+  <img src="product10.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+    <h2>OPPO A334</h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product11.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO F17  </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product12.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO a54  </h2>
+
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+
+
+
+
+</div>
+
+
+<!-- jhfgklfg-->
+<div class="adder" ></div>
+
+
+
+<div style="border:0px solid red;height:20px"></div>
+<div style="border:0px solid red;width:10%;height:70px;float:left;margin-top:0px"></div>
+<div class="mobiletop">
+Savings On Big Screen's</h1>
+</div>
+<div style="border:0px solid red;width:10%;height:20px;float:left;margin-top:0px"></div>
+
+
+
+<div style="border:0px solid red;height:100px;width:10%;float:left"></div>
+<div style="border:0px solid red;height:100px;width:10%;float:left">
+</div>
+<div style="border:0px solid red;height:100px;width:80%;float:left;margin-top:-55px">
+
+
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+  <img src="product13.png" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO A15s </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+
+  <img src="product14.png" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+    <h2>OPPO A334</h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product15.png" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO F17  </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product16.png" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO a54  </h2>
+
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+
+
+
+
+</div>
+
+
+<!-- jhfgklfg-->
+<div class="adder" ></div>
+
+
+
+<div style="border:0px solid red;height:20px"></div>
+<div style="border:0px solid red;width:10%;height:70px;float:left;margin-top:0px"></div>
+<div class="mobiletop">
+Special Offers for student's</h1>
+</div>
+<div style="border:0px solid red;width:10%;height:20px;float:left;margin-top:0px"></div>
+
+
+
+<div style="border:0px solid red;height:100px;width:10%;float:left"></div>
+<div style="border:0px solid red;height:100px;width:10%;float:left">
+</div>
+<div style="border:0px solid red;height:100px;width:80%;float:left;margin-top:-55px">
+
+
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+  <img src="product17.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO A15s </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+
+  <img src="product18.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+    <h2>OPPO A334</h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product19.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO F17  </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product20.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO a54  </h2>
+
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+
+
+
+
+</div>
+
+<!-- jhfgklfg-->
+<div class="adder" ></div>
+
+
+
+<div style="border:0px solid red;height:20px"></div>
+<div style="border:0px solid red;width:10%;height:70px;float:left;margin-top:0px"></div>
+<div class="mobiletop">
+For The Gammer in you...!</h1>
+</div>
+<div style="border:0px solid red;width:10%;height:20px;float:left;margin-top:0px"></div>
+
+
+
+<div style="border:0px solid red;height:100px;width:10%;float:left"></div>
+<div style="border:0px solid red;height:100px;width:10%;float:left">
+</div>
+<div style="border:0px solid red;height:100px;width:80%;float:left;margin-top:-55px">
+
+
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+  <img src="product21.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO A15s </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="card" style="padding:10px;border-radius: 3%; ">
+
+  <img src="product26.jpg" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+    <h2>OPPO A334</h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product22.webp" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO F17  </h2>
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+  <div class="cardd" style="padding:10px;border-radius: 3%; ">
+  <img src="product25.jpg" alt="Denim Jeans" style="width:100%;height:250px;border-radius: 3%;"class="responsive">
+  <h2>OPPO a54  </h2>
+
+  <p class="price">11,990 Rs</p>
+
+  <span>- Faster And Smoother<span><br><br>
+-  ₹ 5000 instant cashback with HDFC Bank Cards
+<p><button>Buy now</button></p> 
+</div>
+
+
+
+
+</div>
+<!-- footer for laptop/destop-->
+
+<div class="adder" ></div>
+<div class="footer">
+<div class="extra">
+
+
+
+</div>
+<div class="tags" >
+<h1 class="dotsk" >piyushwala</h1>
+<h3  class="red" >Products</h3>
+<br><a href="aboutus.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Mobiles</a>
+<br><a href="aboutus.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Laptops</a>
+<br><a href="last.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Desktop</a>
+<br><a href="https://www.mahapolice.gov.in/" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Gaming</a>
+<br><a href="contact.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Tablets</a>
+<br><a href="contact.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">TV's </a>
+<br>
+
+
+</div>
+<div class="tags" >
+<h1 class="dotskk"  >.</h1>
+<h3  class="red" >Let Us Help You</h3>
+<br><a href="aboutus.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Who we are</a>
+<br><a href="aboutus.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Code of Couduct</a>
+<br><a href="last.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Community</a>
+<br><a href="https://www.mahapolice.gov.in/" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Report Fraud </a>
+<br><a href="contact.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Contact</a>
+<br><a href="contact.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Mobile apps </a></div>
+
+
+<div class="tagss" >
+<h1 class="dotss" >. </h1>
+<h3  class="red" >For Business</h3>
+<br><a href="aboutus.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">My Orders</a>
+<br><a href="aboutus.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Track my order</a>
+<br><a href="last.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Tech talks</a>
+<br><a href="https://www.mahapolice.gov.in/" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Report Fraud</a>
+<br><a href="contact.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Guides</a>
+<br><a href="contact.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Impact </a></div>
+<div class="tagss"  >
+<h1 class="dotss" >. </h1>
+<h3  class="red" >For You</h3>
+<br><a href="aboutus.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Business  </a>
+<br><a href="aboutus.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Who we are</a>
+<br><a href="last.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Privacy</a>
+<br><a href="https://www.mahapolice.gov.in/" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Terms & condition</a>
+<br><a href="contact.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Security</a>
+<br><a href="contact.html" style="color:#636161;text-decoration:none;font-family:Arial;color:#e3e1e1">Sitemap </a></div>
+
+
+<!-- footer for mobile/tablet -->
+
+
+
+
+
+</div>
+
+
+<div class="lfooter">
+
+By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2021
+<br>
+© Piyushwala™ Ltd. All rights reserved.
+</div>
+
+<div class="lfooter2" style=";float:right;">
+<i class="fa fa-instagram"  style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;
+<i class="fa fa-whatsapp"  style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;
+<i class="fa fa-linkedin"  style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;
+<i class="fa fa-youtube"  style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;
+<i class="fa fa-envelope"  style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;
+<i class="fa fa-twitter"  style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;
+<i class="fafa-facebook"  style="font-size:30px"></i>&nbsp;&nbsp;&nbsp;
+<i class="fa fa-globe"  style="font-size:30px></i>
+
+
+
+</div>
+
+</body>
+</html>
+
